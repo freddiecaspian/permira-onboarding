@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Before I start - Freddie Chambers</title>
+<meta name="theme-color" content="#272560">
+<meta property="og:title" content="Before I start">
+<meta property="og:description" content="A few optional things to align on before the summer - how we work, and what good looks like.">
+<link rel="icon" href="assets/permira-favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --paper: #FFFFFF;
+  --mist: #F7F7F7;
+  --pale-indigo: #F4F4F7;
+  --indigo: #272560;
+  --mid-indigo: #525180;
+  --slate: #73859F;
+  --orange: #E67C25;
+  --orange-deep: #DB5C15;
+  --lilac: #C9C9D7;
+}
+
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: 'Graphik', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: var(--paper);
+  color: var(--indigo);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.75rem 1.35rem 3rem;
+}
+
+/* ---- HEADER ---- */
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--lilac);
+  margin-bottom: 2.25rem;
+}
+.wordmark { height: 30px; width: auto; display: block; }
+.masthead .who {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+/* ---- HERO ---- */
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 0.85rem;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  color: var(--indigo);
+  margin-bottom: 1rem;
+}
+.standfirst {
+  font-size: 1.06rem;
+  font-weight: 400;
+  color: var(--mid-indigo);
+  max-width: 33em;
+  margin-bottom: 2.5rem;
+}
+
+/* ---- LENS PANEL ---- */
+.lens {
+  background: var(--mist);
+  border-left: 3px solid var(--orange);
+  border-radius: 0 10px 10px 0;
+  padding: 1.15rem 1.25rem 1.2rem;
+  margin: 2rem 0 2.5rem;
+}
+.lens .eyebrow { margin-bottom: 0.55rem; }
+.lens p {
+  font-size: 0.96rem;
+  color: var(--indigo);
+  margin: 0;
+}
+
+/* ---- IDENTITY ROW ---- */
+.identity {
+  display: flex;
+  gap: 0.9rem;
+  margin-bottom: 2.5rem;
+}
+.identity .field { flex: 1; margin: 0; }
+@media (max-width: 460px) {
+  .identity { flex-direction: column; gap: 1.1rem; }
+}
+
+/* ---- SECTIONS ---- */
+.section { margin-bottom: 2.5rem; }
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  padding-bottom: 0.9rem;
+  margin-bottom: 1.4rem;
+  border-bottom: 1px solid var(--lilac);
+}
+.section-num {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--orange);
+  font-variant-numeric: tabular-nums;
+}
+.section-title {
+  font-size: 1.18rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--indigo);
+}
+
+/* ---- FIELDS ---- */
+.field { margin-bottom: 1.5rem; }
+.field label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--indigo);
+  margin-bottom: 0.55rem;
+  line-height: 1.4;
+}
+.field .req { color: var(--orange); }
+.field .opt {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--slate);
+}
+input[type="text"],
+textarea {
+  width: 100%;
+  background: var(--paper);
+  border: 1px solid var(--lilac);
+  border-radius: 9px;
+  padding: 0.7rem 0.85rem;
+  color: var(--indigo);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.45;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+textarea { min-height: 62px; resize: vertical; }
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--indigo);
+  box-shadow: 0 0 0 3px rgba(39, 37, 96, 0.10);
+}
+input::placeholder, textarea::placeholder { color: var(--slate); opacity: 0.7; }
+
+/* ---- SUBMIT ---- */
+.actions { margin-top: 2.25rem; }
+.note-line {
+  font-size: 0.84rem;
+  color: var(--slate);
+  margin-bottom: 1rem;
+}
+.submit-btn {
+  width: 100%;
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  font-family: inherit;
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.submit-btn:hover { background: var(--orange-deep); }
+.submit-btn:active { transform: scale(0.99); }
+.submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+.error-msg {
+  color: var(--orange-deep);
+  font-size: 0.86rem;
+  font-weight: 500;
+  margin-top: 0.9rem;
+  display: none;
+}
+.error-msg.visible { display: block; }
+
+/* ---- FOOTER ---- */
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding-top: 1.5rem;
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--lilac);
+}
+.footer img { width: 22px; height: 22px; }
+.footer span {
+  font-size: 0.74rem;
+  color: var(--slate);
+  letter-spacing: 0.02em;
+}
+
+/* ---- THANKS (indigo full-bleed) ---- */
+.thanks {
+  display: none;
+  text-align: center;
+  background: var(--indigo);
+  border-radius: 14px;
+  padding: 3rem 1.5rem 3.25rem;
+  margin-top: 1rem;
+}
+.thanks.visible { display: block; }
+.thanks img { width: 52px; height: 52px; margin-bottom: 1.5rem; }
+.thanks h2 {
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.75rem;
+}
+.thanks p {
+  color: #C9C9D7;
+  font-size: 1rem;
+  max-width: 28em;
+  margin: 0 auto;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 460px) {
+  .wrap { padding: 1.4rem 1.15rem 2.5rem; }
+  h1 { font-size: 2.1rem; }
+  .standfirst { font-size: 1rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <img class="wordmark" src="assets/permira-logo-dark.png" alt="Permira">
+    <span class="who">Freddie Chambers</span>
+  </header>
+
+  <main id="form-view">
+    <p class="eyebrow">Permira &middot; Summer 2026</p>
+    <h1>Before I start.</h1>
+    <p class="standfirst">A few things I'd love to get aligned on up front - how we'll work together.</p>
+
+    <form id="qform" novalidate>
+
+      <div class="identity">
+        <div class="field">
+          <label for="name">Your name <span class="req">*</span></label>
+          <input type="text" id="name" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="role">Your role <span class="opt">optional</span></label>
+          <input type="text" id="role" placeholder="how you'd describe what you do">
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="section-head"><span class="section-num">01</span><span class="section-title">What good looks like</span></div>
+
+        <div class="field">
+          <label for="shape">My sense is this is a role we shape together as we go, more than a fixed programme. Is that how you see it too?</label>
+          <textarea id="shape"></textarea>
+        </div>
+        <div class="field">
+          <label for="audience">My read is the main goal is internal - making Permira's own people more AI-native - with some of that extending into ideas for the portfolio companies. Is that the right framing?</label>
+          <textarea id="audience"></textarea>
+        </div>
+        <div class="field">
+          <label for="success">What would make this a clear success in your eyes by the end of August?</label>
+          <textarea id="success"></textarea>
+        </div>
+        <div class="field">
+          <label for="own">Anything you'd want me to own outright, versus things you'd rather lead on yourself?</label>
+          <textarea id="own"></textarea>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><span class="section-num">02</span><span class="section-title">How you like to work</span></div>
+
+        <div class="field">
+          <label for="deliver">Your favourite way to get things - rough thinking early, or more polished and finished? Deck, doc, or a working demo?</label>
+          <textarea id="deliver"></textarea>
+        </div>
+        <div class="field">
+          <label for="channel">Preferred channel - email, Teams, WhatsApp, a call? And does that change depending on how important or urgent it is?</label>
+          <textarea id="channel"></textarea>
+        </div>
+        <div class="field">
+          <label for="flow">Culturally, how does a piece of work get from idea to live here - is it quite agile? And who signs off along the way?</label>
+          <textarea id="flow"></textarea>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><span class="section-num">03</span><span class="section-title">People and the landscape</span></div>
+
+        <div class="field">
+          <label for="people">A few people across the firm or portfolio worth getting to know early?</label>
+          <textarea id="people"></textarea>
+        </div>
+        <div class="field">
+          <label for="team">Where does your team sit in the firm, and where exactly would I fit in? Anything organisationally I should be aware of?</label>
+          <textarea id="team"></textarea>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><span class="section-num">04</span><span class="section-title">Practical</span></div>
+
+        <div class="field">
+          <label for="pattern">Working pattern - office or remote?</label>
+          <textarea id="pattern"></textarea>
+        </div>
+        <div class="field">
+          <label for="hours">What are the working hours genuinely like, and the expectation out of hours? If I email on a Sunday, is a quick reply expected, or is that for Monday?</label>
+          <textarea id="hours"></textarea>
+        </div>
+        <div class="field">
+          <label for="prep">Anything I could read or prep over the next couple of weeks to arrive genuinely useful?</label>
+          <textarea id="prep"></textarea>
+        </div>
+      </section>
+
+      <div class="actions">
+        <p class="note-line">All optional. Answer what's easy, leave the rest - we can cover anything on our call.</p>
+        <button type="submit" class="submit-btn" id="submit-btn">Send to Freddie</button>
+        <p class="error-msg" id="error-msg">Just your name first, then send.</p>
+      </div>
+    </form>
+  </main>
+
+  <div class="thanks" id="thanks">
+    <img src="assets/permira-favicon.png" alt="">
+    <h2>Thank you.</h2>
+    <p>That's genuinely useful - it'll help me arrive ready to be useful from day one. Looking forward to the summer.</p>
+  </div>
+
+  <footer class="footer">
+    <img src="assets/permira-favicon.png" alt="">
+    <span>Freddie Chambers &middot; Summer 2026</span>
+  </footer>
+
+</div>
+
+<script>
+// Replace with the Apps Script Web App URL after deploying apps-script.gs (see README).
+const SCRIPT_URL = 'REPLACE_WITH_APPS_SCRIPT_URL';
+
+const form = document.getElementById('qform');
+const submitBtn = document.getElementById('submit-btn');
+const errorMsg = document.getElementById('error-msg');
+
+const KEYS = ['name','role','shape','audience','success','own','deliver','channel','flow','people','team','pattern','hours','prep'];
+
+function val(id) {
+  const el = document.getElementById(id);
+  return el ? el.value.trim() : '';
+}
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  if (!val('name')) {
+    errorMsg.classList.add('visible');
+    document.getElementById('name').focus();
+    return;
+  }
+  errorMsg.classList.remove('visible');
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+
+  const payload = { timestamp: new Date().toISOString() };
+  KEYS.forEach(k => { payload[k] = val(k); });
+
+  try {
+    await fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    document.getElementById('form-view').style.display = 'none';
+    document.getElementById('thanks').classList.add('visible');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } catch (err) {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send to Freddie';
+    errorMsg.textContent = 'Something went wrong - please try again, or just reply to my note.';
+    errorMsg.classList.add('visible');
+  }
+});
+</script>
+</body>
+</html>
